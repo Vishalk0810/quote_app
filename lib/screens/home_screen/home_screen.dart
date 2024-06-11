@@ -29,18 +29,18 @@ class _HomePageState extends State<HomePage> {
               ButtonSegment<String>(
                   value: 'ListView',
                   label: Text(
-                    'ListView',
+                    'Grid View',
                     style: TextStyle(fontSize: 12),
                   ),
                   icon: const Icon(
-                    Icons.list_alt,
+                    Icons.apps_rounded,
                     size: 18,
                   )),
               ButtonSegment<String>(
                 value: 'GridView',
-                label: Text('GridView', style: TextStyle(fontSize: 12)),
+                label: Text('List View', style: TextStyle(fontSize: 12)),
                 icon: const Icon(
-                  Icons.apps_rounded,
+                  Icons.list_alt,
                   size: 18,
                 ),
               ),
@@ -58,58 +58,7 @@ class _HomePageState extends State<HomePage> {
       body: Stack(
         children: [
           (changeToggle)
-              ? GridView.builder(
-            itemCount: Quote_Type_Categories.length,
-            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 2, childAspectRatio: 1),
-            itemBuilder: (context, index) => GestureDetector(
-              onTap: () {
-                Navigator.pushNamed(context, '/quote');
-              },
-
-              child: Card(
-                // color: Colors.transparent,
-                // shadowColor: Colors.black12,
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(30)),
-                child: Container(
-                  margin: EdgeInsets.all(10),
-                  // padding: EdgeInsets.all(15),
-                  height: height * 0.10,
-                  width: width * 0.5,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(25),
-                    image: DecorationImage(
-                      fit: BoxFit.cover,
-                      image: AssetImage(HomeScreenImagelist[index])
-                    ),
-                  ),
-                  child: Column(
-
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Icon(
-                        Quote_Type_Categories[index]['home_Icon'],
-                        size: 40,
-                        color: Quote_Type_Categories[index]['home_color'],
-                      ),
-                      SizedBox(
-                        height: height * 0.02,
-                      ),
-                      Text(
-                        Quote_Type_Categories[index]['home_Text'],
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          fontSize: 22,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-            ),
-          )
-              : ListView.builder(
+              ? ListView.builder(
             itemCount: Quote_Type_Categories.length,
             itemBuilder: (context, index) => Card(
               child: GestureDetector(
@@ -147,6 +96,57 @@ class _HomePageState extends State<HomePage> {
                         ),
                       ],
                     ),
+                  ),
+                ),
+              ),
+            ),
+          )
+              : GridView.builder(
+            itemCount: Quote_Type_Categories.length,
+            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 2, childAspectRatio: 1),
+            itemBuilder: (context, index) => GestureDetector(
+              onTap: () {
+                Navigator.pushNamed(context, '/quote');
+              },
+
+              child: Card(
+                // color: Colors.transparent,
+                // shadowColor: Colors.black12,
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(30)),
+                child: Container(
+                  margin: EdgeInsets.all(10),
+                  // padding: EdgeInsets.all(15),
+                  height: height * 0.10,
+                  width: width * 0.5,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(25),
+                    image: DecorationImage(
+                        fit: BoxFit.cover,
+                        image: AssetImage(HomeScreenImagelist[index])
+                    ),
+                  ),
+                  child: Column(
+
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(
+                        Quote_Type_Categories[index]['home_Icon'],
+                        size: 40,
+                        color: Quote_Type_Categories[index]['home_color'],
+                      ),
+                      SizedBox(
+                        height: height * 0.02,
+                      ),
+                      Text(
+                        Quote_Type_Categories[index]['home_Text'],
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          fontSize: 22,
+                        ),
+                      ),
+                    ],
                   ),
                 ),
               ),
