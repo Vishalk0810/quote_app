@@ -63,6 +63,7 @@ class _HomePageState extends State<HomePage> {
             itemBuilder: (context, index) => Card(
               child: GestureDetector(
                 onTap: () {
+                  selectedIndex = index;
                   Navigator.pushNamed(context, '/quote');
                 },
                 child: Card(
@@ -80,19 +81,12 @@ class _HomePageState extends State<HomePage> {
                     ),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.end,
                       children: [
-                        Icon(
-                          Quote_Type_Categories[index]['home_Icon'],
-                          size: 40,
-                          color: Quote_Type_Categories[index]
-                          ['home_color'],
-                        ),
-                        SizedBox(
-                          width: width * 0.06,
-                        ),
+                        SizedBox(height: 20,),
                         Text(
                           Quote_Type_Categories[index]['home_Text'],
-                          style: TextStyle(fontSize: 22),
+                          style: TextStyle(fontSize: 22,color: Colors.white),
                         ),
                       ],
                     ),
@@ -107,6 +101,7 @@ class _HomePageState extends State<HomePage> {
                 crossAxisCount: 2, childAspectRatio: 1),
             itemBuilder: (context, index) => GestureDetector(
               onTap: () {
+                selectedIndex = index;
                 Navigator.pushNamed(context, '/quote');
               },
 
@@ -128,24 +123,17 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                   child: Column(
-
-                    mainAxisAlignment: MainAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.end,
                     children: [
-                      Icon(
-                        Quote_Type_Categories[index]['home_Icon'],
-                        size: 40,
-                        color: Quote_Type_Categories[index]['home_color'],
-                      ),
-                      SizedBox(
-                        height: height * 0.02,
-                      ),
                       Text(
                         Quote_Type_Categories[index]['home_Text'],
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           fontSize: 22,
+                          color: Colors.white,
                         ),
                       ),
+                      SizedBox(height: 10,),
                     ],
                   ),
                 ),
