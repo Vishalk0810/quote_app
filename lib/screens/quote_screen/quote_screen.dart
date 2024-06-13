@@ -29,6 +29,7 @@ class _QuoteScreenState extends State<QuoteScreen> {
               child: Column(
                 children: [
                   SizedBox(height: 20,),
+                  Text('Hii'),
                   Text(
                     Quote_Type_Categories[selectedIndex]['home_Text'],style: TextStyle(
                     color: Colors.black,
@@ -36,7 +37,6 @@ class _QuoteScreenState extends State<QuoteScreen> {
                     fontSize: 20,
                   ),
                   ),
-
                 ],
               ),
             ),
