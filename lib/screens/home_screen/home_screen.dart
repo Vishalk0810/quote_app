@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-
+import '../../Modal/quote_modal.dart';
 import '../../utils/list.dart';
+import '../../utils/quote_list.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -10,109 +11,40 @@ class HomePage extends StatefulWidget {
 }
 
 bool changeToggle = false;
-
-Set<String> _selected = {'ListView'};
+QuoteModel? quoteModelText;
 
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
+    quoteModelText=QuoteModel.toList(l1: QuoteList);
     double height = MediaQuery.of(context).size.height;
     double width = MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: AppBar(
        title: Text('Home Page'),
-        actions: [
-          SegmentedButton(
-            // style: ButtonStyle(),
-            multiSelectionEnabled: false,
-            segments: [
-              ButtonSegment<String>(
-                  value: 'ListView',
-                  label: Text(
-                    'Grid View',
-                    style: TextStyle(fontSize: 12),
-                  ),
-                  icon: const Icon(
-                    Icons.apps_rounded,
-                    size: 18,
-                  )),
-              ButtonSegment<String>(
-                value: 'GridView',
-                label: Text('List View', style: TextStyle(fontSize: 12)),
-                icon: const Icon(
-                  Icons.list_alt,
-                  size: 18,
-                ),
-              ),
-            ],
-            selected: _selected,
-            onSelectionChanged: (Set<String> newselection) {
-              setState(() {
-                _selected = newselection;
-                changeToggle = !changeToggle;
-              });
-            },
-          ),
-        ],
       ),
       body: Stack(
         children: [
-          (changeToggle)
-              ? ListView.builder(
-            itemCount: Quote_Type_Categories.length,
-            itemBuilder: (context, index) => Card(
-              child: GestureDetector(
-                onTap: () {
-                  selectedIndex = index;
-                  Navigator.pushNamed(context, '/quote');
-                },
-                child: Card(
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(30)),
-                  child: Container(
-                    height: height * 0.10,
-                    width: width * 0.5,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      image: DecorationImage(
-                          fit: BoxFit.cover,
-                          image: AssetImage(HomeScreenImagelist[index])
-                      ),
-                    ),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.end,
-                      children: [
-                        SizedBox(height: 20,),
-                        Text(
-                          Quote_Type_Categories[index]['home_Text'],
-                          style: TextStyle(fontSize: 22,color: Colors.white),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-            ),
-          )
-              : GridView.builder(
+          GridView.builder(
             itemCount: Quote_Type_Categories.length,
             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2, childAspectRatio: 1),
             itemBuilder: (context, index) => GestureDetector(
               onTap: () {
                 selectedIndex = index;
-                Navigator.pushNamed(context, '/quote');
+                categoryStore.clear();
+                for(int i = 0; i<quoteModelText!.quoteModelList.length; i++){
+                  if(category[index]==quoteModelText!.quoteModelList[i].cate){
+                    categoryStore.add(QuoteList[i]);
+                  }
+                }
+                Navigator.of(context).pushNamed('/quote');
               },
-
               child: Card(
-                // color: Colors.transparent,
-                // shadowColor: Colors.black12,
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(30)),
                 child: Container(
                   margin: EdgeInsets.all(10),
-                  // padding: EdgeInsets.all(15),
                   height: height * 0.10,
                   width: width * 0.5,
                   decoration: BoxDecoration(

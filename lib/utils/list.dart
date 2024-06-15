@@ -80,3 +80,76 @@ List Quote_Type_Categories = [
 ];
 
 int selectedIndex = 0;
+
+List categoryStore = [];
+
+List category = [
+  'Motivation',
+  'Love',
+  'Inspiration',
+  'Sad',
+  'Buisness',
+  'Overcoming',
+  'Positivity',
+  'Depration',
+  'Move on',
+  'Photos',
+  'Status',
+  'Sucide',
+];
+
+
+List fontFamilyList = [
+  'Dancing Script',
+  'Josefin Sans',
+  'Anton',
+  'Exo 2',
+  'Pacifico',
+  'Lobster',
+  'Imbue',
+  'Crimson Text',
+  'Prompt',
+  'Varela Round',
+  'Licorice',
+  'Play',
+  'IBM Plex Mono',
+  'Caveat',
+  'Chakra Petch',
+  'Shadows Into Light',
+  'Abril Fatface',
+  'Satisfy',
+  'Lilita One',
+  'Galada',
+  'Permanent Marker',
+  'Indie Flower',
+  'Edu NSW ACT Foundation',
+  'Orbitron',
+  'Cinzel',
+];
+
+int fontIndex = 0;
+
+bool addProcess = false;
+
+List<Color> colorList = [
+    Colors.white,
+    Colors.black,
+    Colors.green,
+    Colors.red,
+    Colors.blue,
+    Colors.amber,
+    Colors.cyan,
+    Colors.grey,
+    Colors.pink,
+    Colors.cyanAccent,
+];
+
+List<String> imageList = [
+  'asset/Images/love.jpg',
+  'asset/Images/sad.jpg',
+  'asset/Images/sucide.jpg',
+  'asset/Images/status.jpg',
+  'asset/Images/depration.jpg',
+];
+
+int imageSelect =0;
