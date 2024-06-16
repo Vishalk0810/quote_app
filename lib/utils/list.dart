@@ -98,36 +98,7 @@ List category = [
   'Sucide',
 ];
 
-
-List fontFamilyList = [
-  'Dancing Script',
-  'Josefin Sans',
-  'Anton',
-  'Exo 2',
-  'Pacifico',
-  'Lobster',
-  'Imbue',
-  'Crimson Text',
-  'Prompt',
-  'Varela Round',
-  'Licorice',
-  'Play',
-  'IBM Plex Mono',
-  'Caveat',
-  'Chakra Petch',
-  'Shadows Into Light',
-  'Abril Fatface',
-  'Satisfy',
-  'Lilita One',
-  'Galada',
-  'Permanent Marker',
-  'Indie Flower',
-  'Edu NSW ACT Foundation',
-  'Orbitron',
-  'Cinzel',
-];
-
-int fontIndex = 0;
+int fontSelected = 0;
 
 bool addProcess = false;
 
@@ -142,14 +113,71 @@ List<Color> colorList = [
     Colors.grey,
     Colors.pink,
     Colors.cyanAccent,
+    Colors.blueAccent,
 ];
 
 List<String> imageList = [
-  'asset/Images/love.jpg',
-  'asset/Images/sad.jpg',
-  'asset/Images/sucide.jpg',
+  'asset/Images/9.webp',
+  'asset/Images/1.jpg',
+  'asset/Images/14.jpg',
+  'asset/Images/22.jpg',
+  'asset/Images/8.jpg',
+  'asset/Images/17.jpg',
+  'asset/Images/23.jpg',
+  'asset/Images/7.jpg',
+  'asset/Images/5.webp',
+  'asset/Images/6.jpg',
+  'asset/Images/18.jpg',
+  'asset/Images/3.jpg',
+  'asset/Images/12.jpg',
+  'asset/Images/20.jpg',
+  'asset/Images/4.jpg',
+  'asset/Images/13.jpg',
+  'asset/Images/15.jpg',
+  'asset/Images/19.jpg',
+  'asset/Images/10.jpg',
+  'asset/Images/11.jpg',
+  'asset/Images/21.jpg',
+  'asset/Images/16.jpg',
+  'asset/Images/24.jpg',
+  'asset/Images/2.jpg',
   'asset/Images/status.jpg',
   'asset/Images/depration.jpg',
 ];
 
 int imageSelect =0;
+
+List fontFamilyList = [
+  'Abril Fatface',
+  'Anton',
+  'Licorice',
+  'Pacifico',
+  'Shadows Into Light',
+  'Dancing Script',
+  'Josefin Sans',
+  'Exo 2',
+  'Lobster',
+  'Imbue',
+  'Crimson Text',
+  'Prompt',
+  'Varela Round',
+  'Play',
+  'IBM Plex Mono',
+  'Satisfy',
+  'Lilita One',
+  'Cinzel',
+  'Galada',
+  'Edu NSW ACT Foundation',
+  'Caveat',
+  'Chakra Petch',
+  'Permanent Marker',
+  'Indie Flower',
+];
+
+GlobalKey repaintKey = GlobalKey();
+
+GlobalKey newRepaintKey = GlobalKey();
+
+List<GlobalKey> globalKeyList =[];
+
+int colorSelected =0;

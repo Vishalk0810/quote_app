@@ -1,7 +1,16 @@
+import 'dart:io';
+import 'package:clipboard/clipboard.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
+import 'package:image_gallery_saver/image_gallery_saver.dart';
+import 'package:path_provider/path_provider.dart';
 import 'package:quote_app/utils/list.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:quote_app/utils/quote_list.dart';
+import 'package:share_extend/share_extend.dart';
 import '../home_screen/home_screen.dart';
+import 'dart:ui' as ui;
+import 'dart:typed_data';
 
 class QuoteScreen extends StatefulWidget {
   const QuoteScreen({super.key});
@@ -25,8 +34,7 @@ class _QuoteScreenState extends State<QuoteScreen> {
                 decoration: BoxDecoration(
                     image: DecorationImage(
                         fit: BoxFit.cover,
-                        image: AssetImage(Quote_Type_Categories[selectedIndex]
-                            ['home_Image']))),
+                        image: AssetImage(imageList[imageSelect]))),
                 child: PageView(
                   scrollDirection: Axis.vertical,
                   children: [
@@ -36,13 +44,20 @@ class _QuoteScreenState extends State<QuoteScreen> {
                               padding: const EdgeInsets.all(10.0),
                               child: Column(
                                 children: [
+                                  Text(Quote_Type_Categories[selectedIndex]['home_Text'],style: TextStyle(
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.w600,
+                                    color: Colors.white
+                                  ),),
                                   SizedBox(
                                     height: height * 0.35,
                                   ),
-                                  SelectableText(
-                                    categoryStore[index]['quote'],
-                                    style: TextStyle(
-                                        color: Colors.black, fontSize: 25),
+                                  RepaintBoundary(
+                                    key: globalKeyList[index],
+                                    child: SelectableText(
+                                      categoryStore[index]['quote'],
+                                      style: GoogleFonts.getFont(fontFamilyList[fontSelected],fontSize: 20,color: colorList[colorSelected]),
+                                    ),
                                   ),
                                   SizedBox(
                                     height: height * 0.23,
@@ -51,7 +66,10 @@ class _QuoteScreenState extends State<QuoteScreen> {
                                       ? IconButton(
                                           onPressed: () {
                                             Navigator.of(context)
-                                                .pushNamed('/changes');
+                                                .pushNamed('/changes')
+                                                .then(
+                                                  (value) => setState(() {}),
+                                                );
                                           },
                                           icon: const Icon(
                                             Icons.image_outlined,
@@ -84,23 +102,56 @@ class _QuoteScreenState extends State<QuoteScreen> {
                                             ),
                                             iconButton(
                                               iconFind: const Icon(
-                                                Icons.font_download,
+                                                Icons.save_alt,
                                                 color: Colors.white,
                                                 size: 40,
                                               ),
                                               alignFind:
                                                   const Alignment(-0.5, 0.9),
-                                              onPass: () {},
+                                              onPass: () async {
+                                                newRepaintKey = globalKeyList[index];
+                                                RenderRepaintBoundary boundary =
+                                                    newRepaintKey.currentContext!
+                                                            .findRenderObject()
+                                                        as RenderRepaintBoundary;
+
+                                                ui.Image image =
+                                                    await boundary.toImage();
+
+                                                ByteData? byteData =
+                                                    await image.toByteData(
+                                                        format: ui
+                                                            .ImageByteFormat
+                                                            .png);
+
+                                                Uint8List img = byteData!.buffer
+                                                    .asUint8List();
+
+                                                ImageGallerySaver.saveImage(
+                                                    img);
+
+                                                ScaffoldMessenger.of(context)
+                                                    .showSnackBar(
+                                                  const SnackBar(
+                                                    content: Text(
+                                                        'Downloaded in the gallery...'),
+                                                  ),
+                                                );
+                                              },
                                             ),
                                             iconButton(
                                               iconFind: const Icon(
-                                                Icons.color_lens_outlined,
+                                                Icons.copy,
                                                 color: Colors.white,
                                                 size: 40,
                                               ),
                                               alignFind:
                                                   const Alignment(0.5, 0.9),
-                                              onPass: () {},
+                                              onPass: () {
+                                                FlutterClipboard.copy(
+                                                    categoryStore[index]
+                                                        ['quote']);
+                                              },
                                             ),
                                           ],
                                         )
@@ -123,7 +174,28 @@ class _QuoteScreenState extends State<QuoteScreen> {
                                         ),
                                   addProcess
                                       ? IconButton(
-                                          onPressed: () {},
+                                          onPressed: () async {
+                                            newRepaintKey = globalKeyList[index];
+                                            RenderRepaintBoundary boundary =
+                                                newRepaintKey.currentContext!
+                                                        .findRenderObject()
+                                                    as RenderRepaintBoundary;
+
+                                            ui.Image image =
+                                                await boundary.toImage();
+
+                                            ByteData? byteData =
+                                                await image.toByteData(
+                                                    format:
+                                                        ui.ImageByteFormat.png);
+                                            Uint8List img =
+                                                byteData!.buffer.asUint8List();
+                                            final path =
+                                                getApplicationDocumentsDirectory();
+                                            File file = File('$path/img.png');
+                                            file.writeAsBytes(img);
+                                            ShareExtend.share(file.path, "IMG");
+                                          },
                                           icon: const Icon(
                                             Icons.share,
                                             size: 35,

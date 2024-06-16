@@ -15,6 +15,15 @@ QuoteModel? quoteModelText;
 
 class _HomePageState extends State<HomePage> {
   @override
+  void initState() {
+    for(int i=0; i<=QuoteList.length; i++)
+    {
+      globalKeyList.add(GlobalKey());
+    }
+    // TODO: implement initState
+    super.initState();
+  }
+  @override
   Widget build(BuildContext context) {
     quoteModelText=QuoteModel.toList(l1: QuoteList);
     double height = MediaQuery.of(context).size.height;
@@ -86,9 +95,9 @@ List HomeScreenImagelist = [
   'asset/Images/status.jpg',
   'asset/Images/sad.jpg',
   'asset/Images/sucide.jpg',
-  'asset/Images/buisness1.jpg',
+  'asset/Images/business.jpg',
   'asset/Images/overcoming.jpg',
   'asset/Images/Positivity.jpg',
   'asset/Images/depration.jpg',
-  'asset/Images/move.png',
+  'asset/Images/Move on.webp',
 ];
