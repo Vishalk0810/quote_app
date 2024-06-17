@@ -85,17 +85,17 @@ List categoryStore = [];
 
 List category = [
   'Motivation',
-  'Love',
   'Inspiration',
+  'Love',
+  'Photos',
+  'Status',
   'Sad',
+  'Sucide',
   'Buisness',
   'Overcoming',
   'Positivity',
   'Depration',
   'Move on',
-  'Photos',
-  'Status',
-  'Sucide',
 ];
 
 int fontSelected = 0;

@@ -58,59 +58,6 @@ List QuoteList = [
     'author': 'Maya Angelou',
     'cate': 'Motivation',
   },
-  //love
-  {
-    'quote': 'Love is composed of a single soul inhabiting two bodies.',
-    'author': 'Aristotle',
-    'cate': 'Love',
-  },
-  {
-    'quote': 'To love and be loved is to feel the sun from both sides.',
-    'author': 'David Viscott',
-    'cate': 'Love',
-  },
-  {
-    'quote':
-        'Being deeply loved by someone gives you strength, while loving someone deeply gives you courage.',
-    'author': 'Lao Tzu',
-    'cate': 'Love',
-  },
-  {
-    'quote': 'The best thing to hold onto in life is each other.',
-    'author': 'Audrey Hepburn',
-    'cate': 'Love',
-  },
-  {
-    'quote':
-        'Love is when the other person\'s happiness is more important than your own.',
-    'author': 'H. Jackson Brown, Jr.',
-    'cate': 'Love',
-  },
-  {
-    'quote': 'To love and be loved is to the greatest happiness of existence.',
-    'author': 'Sydney Smith',
-    'cate': 'Love',
-  },
-  {
-    'quote': 'We are shaped and fashioned by what we love.',
-    'author': 'Johann Wolfgang von Goethe',
-    'cate': 'Love',
-  },
-  {
-    'quote': 'Love is not only something you feel, it is something you do.',
-    'author': 'David Wilkerson',
-    'cate': 'Love',
-  },
-  {
-    'quote': 'Where there is love there is life.',
-    'author': 'Mahatma Gandhi',
-    'cate': 'Love',
-  },
-  {
-    'quote': 'Love does not dominate; it cultivates.',
-    'author': 'Johann Wolfgang von Goethe',
-    'cate': 'Love',
-  },
   //Inspiration
   {
     'quote': 'The only way to do great work is to love what you do.',
@@ -166,6 +113,172 @@ List QuoteList = [
     'quote': 'The journey of a thousand miles begins with one step.',
     'author': 'Lao Tzu',
     'cate': 'Inspiration',
+  },
+  // Love
+  {
+    'quote': 'Love is composed of a single soul inhabiting two bodies.',
+    'author': 'Aristotle',
+    'cate': 'Love',
+  },
+  {
+    'quote': 'To love and be loved is to feel the sun from both sides.',
+    'author': 'David Viscott',
+    'cate': 'Love',
+  },
+  {
+    'quote':
+    'Being deeply loved by someone gives you strength, while loving someone deeply gives you courage.',
+    'author': 'Lao Tzu',
+    'cate': 'Love',
+  },
+  {
+    'quote': 'The best thing to hold onto in life is each other.',
+    'author': 'Audrey Hepburn',
+    'cate': 'Love',
+  },
+  {
+    'quote':
+    'Love is when the other person\'s happiness is more important than your own.',
+    'author': 'H. Jackson Brown, Jr.',
+    'cate': 'Love',
+  },
+  {
+    'quote': 'To love and be loved is to the greatest happiness of existence.',
+    'author': 'Sydney Smith',
+    'cate': 'Love',
+  },
+  {
+    'quote': 'We are shaped and fashioned by what we love.',
+    'author': 'Johann Wolfgang von Goethe',
+    'cate': 'Love',
+  },
+  {
+    'quote': 'Love is not only something you feel, it is something you do.',
+    'author': 'David Wilkerson',
+    'cate': 'Love',
+  },
+  {
+    'quote': 'Where there is love there is life.',
+    'author': 'Mahatma Gandhi',
+    'cate': 'Love',
+  },
+  {
+    'quote': 'Love does not dominate; it cultivates.',
+    'author': 'Johann Wolfgang von Goethe',
+    'cate': 'Love',
+  },
+  // Photos
+  {
+    'quote':
+    'Taking pictures is savoring life intensely, every hundredth of a second.',
+    'author': 'Marc Riboud',
+    'cate': 'Photos',
+  },
+  {
+    'quote': 'Photography is the story I fail to put into words.',
+    'author': 'Destin Sparks',
+    'cate': 'Photos',
+  },
+  {
+    'quote':
+    'When words become unclear, I shall focus with photographs. When images become inadequate, I shall be content with silence.',
+    'author': 'Ansel Adams',
+    'cate': 'Photos',
+  },
+  {
+    'quote':
+    'Photography takes an instant out of time, altering life by holding it still.',
+    'author': 'Dorothea Lange',
+    'cate': 'Photos',
+  },
+  {
+    'quote': 'You don’t take a photograph, you make it.',
+    'author': 'Ansel Adams',
+    'cate': 'Photos',
+  },
+  {
+    'quote':
+    'A photograph is a secret about a secret. The more it tells you, the less you know.',
+    'author': 'Diane Arbus',
+    'cate': 'Photos',
+  },
+  {
+    'quote': 'Photography is the beauty of life, captured.',
+    'author': 'Tara Chisholm',
+    'cate': 'Photos',
+  },
+  {
+    'quote':
+    'In photography, there is a reality so subtle that it becomes more real than reality.',
+    'author': 'Alfred Stieglitz',
+    'cate': 'Photos',
+  },
+  {
+    'quote':
+    'To me, photography is an art of observation. It’s about finding something interesting in an ordinary place… I’ve found it has little to do with the things you see and everything to do with the way you see them.',
+    'author': 'Elliott Erwitt',
+    'cate': 'Photos',
+  },
+  {
+    'quote':
+    'The best thing about a picture is that it never changes, even when the people in it do.',
+    'author': 'Andy Warhol',
+    'cate': 'Photos',
+  },
+  // Status
+  {
+    'quote': 'Life is 10% what happens to us and 90% how we react to it.',
+    'author': 'Charles R. Swindoll',
+    'cate': 'Status',
+  },
+  {
+    'quote': 'The only way to do great work is to love what you do.',
+    'author': 'Steve Jobs',
+    'cate': 'Status',
+  },
+  {
+    'quote': 'Believe you can and you’re halfway there.',
+    'author': 'Theodore Roosevelt',
+    'cate': 'Status',
+  },
+  {
+    'quote':
+    'You are never too old to set another goal or to dream a new dream.',
+    'author': 'C.S. Lewis',
+    'cate': 'Status',
+  },
+  {
+    'quote': 'Happiness is not by chance, but by choice.',
+    'author': 'Jim Rohn',
+    'cate': 'Status',
+  },
+  {
+    'quote':
+    'Success is not final, failure is not fatal: It is the courage to continue that counts.',
+    'author': 'Winston Churchill',
+    'cate': 'Status',
+  },
+  {
+    'quote':
+    'The only limit to our realization of tomorrow is our doubts of today.',
+    'author': 'Franklin D. Roosevelt',
+    'cate': 'Status',
+  },
+  {
+    'quote':
+    'Life isn’t about waiting for the storm to pass, it’s about learning to dance in the rain.',
+    'author': 'Vivian Greene',
+    'cate': 'Status',
+  },
+  {
+    'quote': 'It always seems impossible until it is done.',
+    'author': 'Nelson Mandela',
+    'cate': 'Status',
+  },
+  {
+    'quote': 'In the end, we only regret the chances we didn’t take.',
+    'author': 'Anonymous',
+    'cate': 'Status',
   },
   //sad
   {
@@ -225,6 +338,67 @@ List QuoteList = [
         'Anxiety is a thin stream of fear trickling through the mind. If encouraged, it cuts a channel into which all other thoughts are drained.',
     'author': 'Arthur Somers Roche',
     'cate': 'Sad',
+  },
+  // Sucide
+  {
+    'quote': 'Suicide is not a remedy.',
+    'author': 'James A. Garfield',
+    'cate': 'Sucide',
+  },
+  {
+    'quote': 'The thought of suicide is a great consolation: by means of it one gets through many a dark night.',
+    'author': 'Friedrich Nietzsche',
+    'cate': 'Sucide',
+  },
+  {
+    'quote': 'Suicide does not end the chances of life getting worse, it eliminates the possibility of it ever getting any better.',
+    'author': 'Unknown',
+    'cate': 'Sucide',
+  },
+  {
+    'quote': 'But in the end one needs more courage to live than to kill himself.',
+    'author': 'Albert Camus',
+    'cate': 'Sucide',
+  },
+  {
+    'quote': 'Sometimes even to live is an act of courage.',
+    'author': 'Seneca',
+    'cate': 'Sucide',
+  },
+  {
+    'quote': 'No one ever lacks a good reason for suicide.',
+    'author': 'Cesare Pavese',
+    'cate': 'Sucide',
+  },
+  {
+    'quote': 'Suicide is mans way of telling God, You can not fire me – I quit.',
+    'author': 'Bill Maher',
+    'cate': 'Sucide',
+  },
+  {
+    'quote': 'The only difference between a suicide and a martyrdom really is the amount of press coverage.',
+    'author': 'Chuck Palahniuk',
+    'cate': 'Sucide',
+  },
+  {
+    'quote': 'Place not your trust in the hope of a cure, for it is not given to man to understand the nature of death.',
+    'author': 'Henri-Frédéric Amiel',
+    'cate': 'Sucide',
+  },
+  {
+    'quote': 'The real reason for not committing suicide is because you always know how swell life gets again after the hell is over.',
+    'author': 'Ernest Hemingway',
+    'cate': 'Sucide',
+  },
+  {
+    'quote': 'To die will be an awfully big adventure.',
+    'author': 'J.M. Barrie',
+    'cate': 'Sucide',
+  },
+  {
+    'quote': 'There is but one truly serious philosophical problem, and that is suicide.',
+    'author': 'Albert Camus',
+    'cate': 'Sucide',
   },
   //buisness
   {
@@ -512,179 +686,5 @@ List QuoteList = [
         'The greatest step towards a life of simplicity is to learn to let go.',
     'author': 'Steve Maraboli',
     'cate': 'Move on',
-  },
-  // Photos
-  {
-    'quote':
-        'Taking pictures is savoring life intensely, every hundredth of a second.',
-    'author': 'Marc Riboud',
-    'cate': 'Photos',
-  },
-  {
-    'quote': 'Photography is the story I fail to put into words.',
-    'author': 'Destin Sparks',
-    'cate': 'Photos',
-  },
-  {
-    'quote':
-        'When words become unclear, I shall focus with photographs. When images become inadequate, I shall be content with silence.',
-    'author': 'Ansel Adams',
-    'cate': 'Photos',
-  },
-  {
-    'quote':
-        'Photography takes an instant out of time, altering life by holding it still.',
-    'author': 'Dorothea Lange',
-    'cate': 'Photos',
-  },
-  {
-    'quote': 'You don’t take a photograph, you make it.',
-    'author': 'Ansel Adams',
-    'cate': 'Photos',
-  },
-  {
-    'quote':
-        'A photograph is a secret about a secret. The more it tells you, the less you know.',
-    'author': 'Diane Arbus',
-    'cate': 'Photos',
-  },
-  {
-    'quote': 'Photography is the beauty of life, captured.',
-    'author': 'Tara Chisholm',
-    'cate': 'Photos',
-  },
-  {
-    'quote':
-        'In photography, there is a reality so subtle that it becomes more real than reality.',
-    'author': 'Alfred Stieglitz',
-    'cate': 'Photos',
-  },
-  {
-    'quote':
-        'To me, photography is an art of observation. It’s about finding something interesting in an ordinary place… I’ve found it has little to do with the things you see and everything to do with the way you see them.',
-    'author': 'Elliott Erwitt',
-    'cate': 'Photos',
-  },
-  {
-    'quote':
-        'The best thing about a picture is that it never changes, even when the people in it do.',
-    'author': 'Andy Warhol',
-    'cate': 'Photos',
-  },
-// Status
-  {
-    'quote': 'Life is 10% what happens to us and 90% how we react to it.',
-    'author': 'Charles R. Swindoll',
-    'cate': 'Status',
-  },
-  {
-    'quote': 'The only way to do great work is to love what you do.',
-    'author': 'Steve Jobs',
-    'cate': 'Status',
-  },
-  {
-    'quote': 'Believe you can and you’re halfway there.',
-    'author': 'Theodore Roosevelt',
-    'cate': 'Status',
-  },
-  {
-    'quote':
-        'You are never too old to set another goal or to dream a new dream.',
-    'author': 'C.S. Lewis',
-    'cate': 'Status',
-  },
-  {
-    'quote': 'Happiness is not by chance, but by choice.',
-    'author': 'Jim Rohn',
-    'cate': 'Status',
-  },
-  {
-    'quote':
-        'Success is not final, failure is not fatal: It is the courage to continue that counts.',
-    'author': 'Winston Churchill',
-    'cate': 'Status',
-  },
-  {
-    'quote':
-        'The only limit to our realization of tomorrow is our doubts of today.',
-    'author': 'Franklin D. Roosevelt',
-    'cate': 'Status',
-  },
-  {
-    'quote':
-        'Life isn’t about waiting for the storm to pass, it’s about learning to dance in the rain.',
-    'author': 'Vivian Greene',
-    'cate': 'Status',
-  },
-  {
-    'quote': 'It always seems impossible until it is done.',
-    'author': 'Nelson Mandela',
-    'cate': 'Status',
-  },
-  {
-    'quote': 'In the end, we only regret the chances we didn’t take.',
-    'author': 'Anonymous',
-    'cate': 'Status',
-  },
-  // Sucide
-  {
-    'quote': 'Suicide is not a remedy.',
-    'author': 'James A. Garfield',
-    'cate': 'Sucide',
-  },
-  {
-    'quote': 'The thought of suicide is a great consolation: by means of it one gets through many a dark night.',
-    'author': 'Friedrich Nietzsche',
-    'cate': 'Sucide',
-  },
-  {
-    'quote': 'Suicide does not end the chances of life getting worse, it eliminates the possibility of it ever getting any better.',
-    'author': 'Unknown',
-    'cate': 'Sucide',
-  },
-  {
-    'quote': 'But in the end one needs more courage to live than to kill himself.',
-    'author': 'Albert Camus',
-    'cate': 'Sucide',
-  },
-  {
-    'quote': 'Sometimes even to live is an act of courage.',
-    'author': 'Seneca',
-    'cate': 'Sucide',
-  },
-  {
-    'quote': 'No one ever lacks a good reason for suicide.',
-    'author': 'Cesare Pavese',
-    'cate': 'Sucide',
-  },
-  {
-    'quote': 'Suicide is mans way of telling God, You can not fire me – I quit.',
-    'author': 'Bill Maher',
-    'cate': 'Sucide',
-  },
-  {
-    'quote': 'The only difference between a suicide and a martyrdom really is the amount of press coverage.',
-    'author': 'Chuck Palahniuk',
-    'cate': 'Sucide',
-  },
-  {
-    'quote': 'Place not your trust in the hope of a cure, for it is not given to man to understand the nature of death.',
-    'author': 'Henri-Frédéric Amiel',
-    'cate': 'Sucide',
-  },
-  {
-    'quote': 'The real reason for not committing suicide is because you always know how swell life gets again after the hell is over.',
-    'author': 'Ernest Hemingway',
-    'cate': 'Sucide',
-  },
-  {
-    'quote': 'To die will be an awfully big adventure.',
-    'author': 'J.M. Barrie',
-    'cate': 'Sucide',
-  },
-  {
-    'quote': 'There is but one truly serious philosophical problem, and that is suicide.',
-    'author': 'Albert Camus',
-    'cate': 'Sucide',
   },
 ];

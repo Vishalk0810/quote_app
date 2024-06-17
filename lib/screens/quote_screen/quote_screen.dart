@@ -44,11 +44,14 @@ class _QuoteScreenState extends State<QuoteScreen> {
                               padding: const EdgeInsets.all(10.0),
                               child: Column(
                                 children: [
-                                  Text(Quote_Type_Categories[selectedIndex]['home_Text'],style: TextStyle(
-                                    fontSize: 20,
-                                    fontWeight: FontWeight.w600,
-                                    color: Colors.white
-                                  ),),
+                                  Text(
+                                    Quote_Type_Categories[selectedIndex]
+                                        ['home_Text'],
+                                    style: TextStyle(
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.w600,
+                                        color: Colors.white),
+                                  ),
                                   SizedBox(
                                     height: height * 0.35,
                                   ),
@@ -56,7 +59,10 @@ class _QuoteScreenState extends State<QuoteScreen> {
                                     key: globalKeyList[index],
                                     child: SelectableText(
                                       categoryStore[index]['quote'],
-                                      style: GoogleFonts.getFont(fontFamilyList[fontSelected],fontSize: 20,color: colorList[colorSelected]),
+                                      style: GoogleFonts.getFont(
+                                          fontFamilyList[fontSelected],
+                                          fontSize: 20,
+                                          color: colorList[colorSelected]),
                                     ),
                                   ),
                                   SizedBox(
@@ -109,9 +115,11 @@ class _QuoteScreenState extends State<QuoteScreen> {
                                               alignFind:
                                                   const Alignment(-0.5, 0.9),
                                               onPass: () async {
-                                                newRepaintKey = globalKeyList[index];
+                                                newRepaintKey =
+                                                    globalKeyList[index];
                                                 RenderRepaintBoundary boundary =
-                                                    newRepaintKey.currentContext!
+                                                    newRepaintKey
+                                                            .currentContext!
                                                             .findRenderObject()
                                                         as RenderRepaintBoundary;
 
@@ -175,7 +183,8 @@ class _QuoteScreenState extends State<QuoteScreen> {
                                   addProcess
                                       ? IconButton(
                                           onPressed: () async {
-                                            newRepaintKey = globalKeyList[index];
+                                            newRepaintKey =
+                                                globalKeyList[index];
                                             RenderRepaintBoundary boundary =
                                                 newRepaintKey.currentContext!
                                                         .findRenderObject()
